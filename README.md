@@ -1,6 +1,8 @@
 # 🐵 Wukong Augment — 悟空增强版 Augment 插件
 
 > 让 Augment 连接自定义 API 服务，支持 32+ 主流大模型，0 积分即可使用。
+>
+> **结论：反重力 / GPT5.4 + Bugment = 满血 Augment**
 
 ## 📦 插件文件
 
@@ -8,6 +10,45 @@
 |------|----------|------|
 | `vscode-Bugment-悟空-0.825.0.vsix` | VS Code / Cursor | ~24 MB |
 | `bugment-idea-1.0.2.zip` | JetBrains 系列（IntelliJ IDEA / GoLand / PyCharm / WebStorm 等） | ~5.4 MB |
+
+---
+
+## ✨ 增强特性
+
+相比原生 Augment，Bugment 插件在以下三个方面做了显著增强：
+
+### 🖼️ 图片理解增强
+
+原生 Augment 对图片的处理能力有限。Bugment 对图片处理进行了**专门的编程场景优化**，当你发送截图时，会自动生成结构化的 **📷 Image Context**，包含：
+
+- **场景描述（Scene）**：自动识别截图中的界面状态、组件结构
+- **可见文本提取（Visible Text）**：精确提取界面中的所有文字内容
+- **UI 结构分析（UI/Structure Details）**：分析图标对齐、元素层级、缩进关系等布局细节
+- **问题证据推理（Evidence Relevant to User Question）**：结合用户提问，自动定位截图中与问题相关的关键线索
+
+> 💡 **典型使用场景**：发送 UI 截图 → Bugment 自动分析布局问题（如图标未对齐、偏移量不一致） → 直接定位到需要修改的代码文件和行号。特别适合前端 CSS 调试、布局修复、UI 还原等编程任务。
+
+### 🧠 提示词增强
+
+Bugment 对对话中的提示词进行了深度优化，使 AI 在编程场景下的理解和执行更加精准。
+
+> 📄 详细的增强提示词说明见 [FEATURES.md](FEATURES.md)
+
+### 🛠️ Skills 技能调用
+
+内置 7 个专业技能，AI 会根据对话内容自动匹配并加载对应技能：
+
+| 技能 | 说明 |
+|------|------|
+| **claude-api** | Claude API / Anthropic SDK 开发参考 |
+| **docx** | Word 文档创建、编辑、格式处理 |
+| **frontend-design** | 高质量前端界面设计与实现 |
+| **pptx** | PPT 演示文稿创建与编辑 |
+| **screenshot** | 系统级屏幕截图 |
+| **template-skill** | 技能模板（可基于此创建自定义技能） |
+| **xlsx** | Excel 电子表格处理（公式、图表、数据清洗） |
+
+> 📄 Skills 的安装与配置说明见 [FEATURES.md](FEATURES.md)
 
 ---
 
